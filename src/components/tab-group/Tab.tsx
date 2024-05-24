@@ -1,4 +1,4 @@
-import React, { Children, ReactNode, cloneElement } from "react";
+import { Children, ReactNode, cloneElement } from "react";
 
 import { useTabGroup } from "./context";
 
