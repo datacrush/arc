@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 
 import { useTabGroup } from "./context";
 
@@ -9,11 +9,7 @@ interface TitleProps {
 export function Title({ children }: TitleProps) {
   const { name } = useTabGroup();
 
-  return (
-    <h3 role="tab" id={`tab-group-${name}`}>
-      {children}
-    </h3>
-  );
+  return <h2 id={`tab-group-${name}`}>{children}</h2>;
 }
 
 export default Title;
