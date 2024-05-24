@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { TabGroupContext } from "./context";
+import { COMPONENT_NAMESPACE } from "./aria";
 
 interface TabGroupProps {
   children: JSX.Element[];
@@ -12,7 +13,7 @@ export function TabGroup(props: TabGroupProps) {
 
   return (
     <TabGroupContext.Provider value={context}>
-      <div className="tab-group">{props.children}</div>
+      <div className={COMPONENT_NAMESPACE}>{props.children}</div>
     </TabGroupContext.Provider>
   );
 }
