@@ -9,13 +9,13 @@ interface IndicatorProps {
 const ROLE = ROLES.METER;
 
 export function Indicator({ label }: IndicatorProps) {
-  const { labeledById, min, max, percent, value } = useMeterContext();
+  const { labelledById, min, max, percent, value } = useMeterContext();
 
   useEffect(() => {
-    if (!labeledById && !label) {
+    if (!labelledById && !label) {
       console.warn("ARIA meter nodes must have an accessible name");
     }
-  }, [label, labeledById]);
+  }, [label, labelledById]);
 
   return (
     <div
@@ -24,7 +24,7 @@ export function Indicator({ label }: IndicatorProps) {
       aria-valuenow={value}
       aria-valuemin={min}
       aria-valuemax={max}
-      aria-labelledby={labeledById}
+      aria-labelledby={labelledById}
       aria-label={label}
     >
       <svg

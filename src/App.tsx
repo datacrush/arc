@@ -18,7 +18,7 @@ function App() {
 
       <p>Meter with explicit Label</p>
 
-      <Meter min={0} max={100} value={75} labeledById="cpu-usage">
+      <Meter min={0} max={100} value={75} labelledById="cpu-usage">
         <MeterLabel>Central Processing Unit (CPU) Usage</MeterLabel>
         <Indicator />
       </Meter>
@@ -31,7 +31,7 @@ function App() {
 
       <h2>Tabs</h2>
 
-      <TabGroup labeledById="demo">
+      <TabGroup labelledById="demo">
         <TabLabel>Demo Tab Group</TabLabel>
         <TabList>
           <Tab>Tab 1</Tab>

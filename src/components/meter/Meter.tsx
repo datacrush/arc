@@ -7,7 +7,7 @@ interface MeterProps {
   children: ReactNode;
   min: number;
   max: number;
-  labeledById?: string;
+  labelledById?: string;
   value: number;
 }
 
@@ -16,11 +16,11 @@ const ROLE = ROLES.METER;
 
 const COMPONENT_NAMESPACE = `${libraryPrefix}-${pattern}`;
 
-export function Meter({ children, min, max, labeledById, value }: MeterProps) {
+export function Meter({ children, min, max, labelledById, value }: MeterProps) {
   const percent = (100 * (value - min)) / (max - min);
 
   const context = {
-    labeledById: labeledById ? `${ROLE}-${labeledById}` : null,
+    labelledById: labelledById ? `${ROLE}-${labelledById}` : null,
     min,
     max,
     percent,

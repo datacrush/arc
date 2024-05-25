@@ -10,10 +10,10 @@ interface LabelProps {
 const ROLE = ROLES.TABLIST;
 
 export function Label({ children }: LabelProps) {
-  const { labeledById } = useTabGroup();
+  const { labelledById } = useTabGroup();
 
   return (
-    <div className={`${ROLE}-label`} id={`${ROLE}-${labeledById}`}>
+    <div className={`${ROLE}-label`} id={`${ROLE}-${labelledById}`}>
       {children}
     </div>
   );

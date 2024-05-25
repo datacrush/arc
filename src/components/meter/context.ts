@@ -1,7 +1,7 @@
 import { createContext, useContext } from "react";
 
 export interface MeterContext {
-  labeledById: string;
+  labelledById: string;
   min: number;
   max: number;
   percent: number;
