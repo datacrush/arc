@@ -2,7 +2,7 @@ import { createContext, useContext } from "react";
 
 export interface TabGroupContext {
   activeTab: number;
-  name: string;
+  labeledById: string;
   setActiveTab: (tab: number) => void;
 }
 

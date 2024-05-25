@@ -4,16 +4,16 @@ import { COMPONENT_NAMESPACE } from "./aria";
 
 interface TabGroupProps {
   children: JSX.Element[];
-  name: string;
+  labeledById: string;
 }
 
-export function TabGroup(props: TabGroupProps) {
+export function TabGroup({ children, labeledById }: TabGroupProps) {
   const [activeTab, setActiveTab] = useState(0);
-  const context = { activeTab, name: props.name, setActiveTab };
+  const context = { activeTab, labeledById, setActiveTab };
 
   return (
     <TabGroupContext.Provider value={context}>
-      <div className={COMPONENT_NAMESPACE}>{props.children}</div>
+      <div className={COMPONENT_NAMESPACE}>{children}</div>
     </TabGroupContext.Provider>
   );
 }

@@ -1,7 +1,12 @@
 import "./App.css";
 
-import { Indicator, Label, Meter } from "./components/meter";
-import { Panel, PanelList, TabGroup, Title } from "./components/tab-group";
+import { Indicator, Label as MeterLabel, Meter } from "./components/meter";
+import {
+  Panel,
+  PanelList,
+  TabGroup,
+  Label as TabLabel,
+} from "./components/tab-group";
 import { Tab, TabList } from "./components/tab-group/Tab";
 
 function App() {
@@ -14,7 +19,7 @@ function App() {
       <p>Meter with explicit Label</p>
 
       <Meter min={0} max={100} value={75} labeledById="cpu-usage">
-        <Label>Central Processing Unit (CPU) Usage</Label>
+        <MeterLabel>Central Processing Unit (CPU) Usage</MeterLabel>
         <Indicator />
       </Meter>
 
@@ -24,8 +29,10 @@ function App() {
         <Indicator label="Central Processing Unit (CPU) Usage" />
       </Meter>
 
-      <TabGroup name="demo">
-        <Title>Demo Tab Group</Title>
+      <h2>Tabs</h2>
+
+      <TabGroup labeledById="demo">
+        <TabLabel>Demo Tab Group</TabLabel>
         <TabList>
           <Tab>Tab 1</Tab>
           <Tab>Tab 2</Tab>

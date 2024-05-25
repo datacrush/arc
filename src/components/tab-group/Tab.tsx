@@ -33,14 +33,14 @@ export function Tab({ children, tabIndex }: TabProps) {
 }
 
 export function TabList({ children }: TabListProps) {
-  const { name } = useTabGroup();
+  const { labeledById } = useTabGroup();
 
   const transformedChildren = Children.map(children, (child, index) => {
     return cloneElement(child, { tabIndex: index });
   });
 
   return (
-    <div role={ROLE} aria-labelledby={`${COMPONENT_NAMESPACE}-${name}`}>
+    <div role={ROLE} aria-labelledby={`${COMPONENT_NAMESPACE}-${labeledById}`}>
       {transformedChildren}
     </div>
   );
