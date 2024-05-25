@@ -6,7 +6,7 @@ interface TabGroupProps {
   labeledById: string;
 }
 
-const COMPONENT_NAMESPACE = "tab-group";
+const COMPONENT_NAMESPACE = "tabs";
 
 export function TabGroup({ children, labeledById }: TabGroupProps) {
   const [activeTab, setActiveTab] = useState(0);
