@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { TabGroupContext } from "./context";
-import { COMPONENT_NAMESPACE } from "./aria";
 
 interface TabGroupProps {
   children: JSX.Element[];
   labeledById: string;
 }
+
+const COMPONENT_NAMESPACE = "tab-group";
 
 export function TabGroup({ children, labeledById }: TabGroupProps) {
   const [activeTab, setActiveTab] = useState(0);

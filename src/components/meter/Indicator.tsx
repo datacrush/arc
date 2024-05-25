@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { COMPONENT_NAMESPACE, ROLES } from "./aria";
+import { ROLES } from "./aria";
 import { useMeterContext } from "./context";
 
 interface IndicatorProps {
@@ -19,7 +19,7 @@ export function Indicator({ label }: IndicatorProps) {
 
   return (
     <div
-      className={`${COMPONENT_NAMESPACE}-indicator-container`}
+      className={`${ROLE}-indicator-container`}
       role={ROLE}
       aria-valuenow={value}
       aria-valuemin={min}
@@ -29,7 +29,7 @@ export function Indicator({ label }: IndicatorProps) {
     >
       <svg
         height="100%"
-        className={`${COMPONENT_NAMESPACE}-indicator-bar`}
+        className={`${ROLE}-indicator-bar`}
         aria-hidden="true"
         version="1.1"
         style={{ width: `${percent}%` }}

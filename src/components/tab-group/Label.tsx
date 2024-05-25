@@ -1,16 +1,22 @@
 import { ReactNode } from "react";
 
 import { useTabGroup } from "./context";
-import { COMPONENT_NAMESPACE } from "./aria";
+import { ROLES } from "./aria";
 
 interface LabelProps {
   children: ReactNode;
 }
 
+const ROLE = ROLES.TABLIST;
+
 export function Label({ children }: LabelProps) {
   const { labeledById } = useTabGroup();
 
-  return <h2 id={`${COMPONENT_NAMESPACE}-${labeledById}`}>{children}</h2>;
+  return (
+    <div className={`${ROLE}-label`} id={`${ROLE}-${labeledById}`}>
+      {children}
+    </div>
+  );
 }
 
 export default Label;

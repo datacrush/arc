@@ -1,19 +1,21 @@
 import { ReactNode } from "react";
 
 import { useMeterContext } from "./context";
-import { COMPONENT_NAMESPACE } from "./aria";
+import { ROLES } from "./aria";
 
 interface LabelProps {
   children: ReactNode;
 }
 
+const ROLE = ROLES.METER;
+
 export function Label({ children }: LabelProps) {
   const { labeledById } = useMeterContext();
 
   return (
-    <h3 className={`${COMPONENT_NAMESPACE}-label`} id={labeledById}>
+    <div className={`${ROLE}-label`} id={labeledById}>
       {children}
-    </h3>
+    </div>
   );
 }
 

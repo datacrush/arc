@@ -1,7 +1,7 @@
 import { Children, ReactNode, cloneElement } from "react";
 
 import { useTabGroup } from "./context";
-import { COMPONENT_NAMESPACE, ROLES } from "./aria";
+import { ROLES } from "./aria";
 
 interface TabProps {
   children: ReactNode;
@@ -40,7 +40,7 @@ export function TabList({ children }: TabListProps) {
   });
 
   return (
-    <div role={ROLE} aria-labelledby={`${COMPONENT_NAMESPACE}-${labeledById}`}>
+    <div role={ROLE} aria-labelledby={`${ROLE}-${labeledById}`}>
       {transformedChildren}
     </div>
   );

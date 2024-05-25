@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { COMPONENT_NAMESPACE, ROLES } from "./aria";
+import { ROLES } from "./aria";
 import { MeterContext } from "./context";
 
 interface MeterProps {
@@ -10,6 +10,7 @@ interface MeterProps {
   value: number;
 }
 
+const COMPONENT_NAMESPACE = "meter";
 const ROLE = ROLES.METER;
 
 export function Meter({ children, min, max, labeledById, value }: MeterProps) {

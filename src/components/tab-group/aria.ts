@@ -3,5 +3,3 @@ export enum ROLES {
   TABLIST = "tablist",
   TABPANEL = "tabpanel",
 }
-
-export const COMPONENT_NAMESPACE = "tab-group";
