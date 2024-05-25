@@ -1,12 +1,14 @@
 import { useState } from "react";
 import { TabGroupContext } from "./context";
+import { PATTERNS, libraryPrefix } from "../common";
 
 interface TabGroupProps {
   children: JSX.Element[];
   labeledById: string;
 }
 
-const COMPONENT_NAMESPACE = "tabs";
+const pattern = PATTERNS.TABS;
+const COMPONENT_NAMESPACE = `${libraryPrefix}-${pattern}}`;
 
 export function TabGroup({ children, labeledById }: TabGroupProps) {
   const [activeTab, setActiveTab] = useState(0);

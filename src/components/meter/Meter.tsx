@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import { ROLES } from "./aria";
 import { MeterContext } from "./context";
+import { PATTERNS, libraryPrefix } from "../common";
 
 interface MeterProps {
   children: ReactNode;
@@ -10,8 +11,10 @@ interface MeterProps {
   value: number;
 }
 
-const COMPONENT_NAMESPACE = "meter";
+const pattern = PATTERNS.METER;
 const ROLE = ROLES.METER;
+
+const COMPONENT_NAMESPACE = `${libraryPrefix}-${pattern}`;
 
 export function Meter({ children, min, max, labeledById, value }: MeterProps) {
   const percent = (100 * (value - min)) / (max - min);
