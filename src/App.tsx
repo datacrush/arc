@@ -1,8 +1,6 @@
-import { useState } from "react";
 import "./App.css";
-import { Alert } from "./components/alert";
 
-import { Indicator, Label as MeterLabel, Meter } from "./components/meter";
+import { Indicator, Meter, Label as MeterLabel } from "./components/meter";
 import {
   Panel,
   PanelList,
@@ -10,27 +8,14 @@ import {
   Label as TabLabel,
 } from "./components/tab-group";
 import { Tab, TabList } from "./components/tab-group/Tab";
+import { AlertDemo } from "./demo";
 
 function App() {
-  const [showAlert, setShowAlert] = useState(false);
-
-  const handleToggleAlert = () => {
-    setShowAlert(!showAlert);
-  };
-
   return (
     <div className="app-root">
       <h1>React Components</h1>
 
-      <h2>Alert</h2>
-
-      <button onClick={handleToggleAlert}>
-        {showAlert ? "Hide Alert" : "Show Alert"}
-      </button>
-
-      <Alert id="demo-alert" active={showAlert}>
-        <div>Demo Alert!</div>
-      </Alert>
+      <AlertDemo />
 
       <h2>Meter</h2>
 
