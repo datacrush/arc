@@ -1,6 +1,5 @@
 import "./App.css";
 
-import { Indicator, Meter, Label as MeterLabel } from "./components/meter";
 import {
   Panel,
   PanelList,
@@ -9,6 +8,7 @@ import {
 } from "./components/tab-group";
 import { Tab, TabList } from "./components/tab-group/Tab";
 import { AlertDemo } from "./demo";
+import { MeterDemo } from "./demo";
 
 function App() {
   return (
@@ -17,20 +17,7 @@ function App() {
 
       <AlertDemo />
 
-      <h2>Meter</h2>
-
-      <p>Meter with explicit Label</p>
-
-      <Meter min={0} max={100} value={75} labelledById="cpu-usage">
-        <MeterLabel>Central Processing Unit (CPU) Usage</MeterLabel>
-        <Indicator />
-      </Meter>
-
-      <p>Meter with Aria Label Specified on the Indicator</p>
-
-      <Meter min={0} max={100} value={25}>
-        <Indicator label="Central Processing Unit (CPU) Usage" />
-      </Meter>
+      <MeterDemo />
 
       <h2>Tabs</h2>
 

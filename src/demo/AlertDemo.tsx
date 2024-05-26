@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import Alert from "../components/alert/Alert";
+import { Alert } from "../components/alert";
 
 export function AlertDemo() {
   const [showAlert, setShowAlert] = useState(false);
