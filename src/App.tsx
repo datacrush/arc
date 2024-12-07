@@ -4,7 +4,7 @@ import { AlertDemo, AlertDialogDemo, MeterDemo, TabsDemo } from "./demo";
 
 function App() {
   return (
-    <div className="app-root">
+    <main className="app-root">
       <h1>ARIA Ready Components (ARC)</h1>
 
       <AlertDemo />
@@ -14,7 +14,7 @@ function App() {
       <MeterDemo />
 
       <TabsDemo />
-    </div>
+    </main>
   );
 }
 
