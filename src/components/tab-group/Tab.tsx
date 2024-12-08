@@ -1,4 +1,4 @@
-import { Children, ReactNode, cloneElement } from "react";
+import { Children, JSX, ReactNode, cloneElement } from "react";
 
 import { useTabGroup } from "./context";
 import { ROLES } from "./aria";

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { JSX, useState } from "react";
 import { TabGroupContext } from "./context";
 import { PATTERNS, libraryPrefix } from "../common";
 
