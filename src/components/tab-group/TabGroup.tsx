@@ -8,7 +8,7 @@ interface TabGroupProps {
 }
 
 const pattern = PATTERNS.TABS;
-const COMPONENT_NAMESPACE = `${libraryPrefix}-${pattern}}`;
+const COMPONENT_NAMESPACE = `${libraryPrefix}-${pattern}`;
 
 export function TabGroup({ children, labelledById }: TabGroupProps) {
   const [activeTab, setActiveTab] = useState(0);
